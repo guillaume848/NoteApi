@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:viewModels.Notes"
+             x:Class="Notes.MainPage">
+
+    <StackLayout Padding="10">
+        <!-- SearchBar -->
+        <SearchBar Placeholder="Search notes..." Text="{Binding SearchQuery}" />
+
+        <!-- ListView -->
+        <ListView ItemsSource="{Binding Notes}" 
+                  SelectedItem="{Binding SelectedNote, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding Content}" FontSize="Small" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Sorting Buttons -->
+        <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+            <Button Text="Sort Title Asc" Command="{Binding SortByTitleAscCommand}" />
+            <Button Text="Sort Title Desc" Command="{Binding SortByTitleDescCommand}" />
+            <Button Text="Sort Date Asc" Command="{Binding SortByDateAscCommand}" />
+            <Button Text="Sort Date Desc" Command="{Binding SortByDateDescCommand}" />
+        </StackLayout>
+
+        <!-- No Results Found -->
+        <Label Text="No results found."
+               IsVisible="{Binding IsNoResultsVisible}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <!-- Add, Edit, Delete Buttons -->
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Add Note" Clicked="OnAddNoteClicked" />
+            <Button Text="Edit" Clicked="OnEditNoteClicked" IsEnabled="{Binding SelectedNote}" />
+            <Button Text="Delete" Clicked="OnDeleteNoteClicked" IsEnabled="{Binding SelectedNote}" TextColor="Red" />
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.NoteDetailsPage">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="10">
+            <!-- Title -->
+            <Label Text="Why Use a Note Application?" 
+                   FontAttributes="Bold" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" />
+
+            <!-- Introduction -->
+            <Label Text="A note application helps you stay organized, boost productivity, and keep track of important information all in one place." 
+                   FontSize="Medium" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center" 
+       VerticalTextAlignment="Center" />
+
+            <!-- Key Benefits -->
+            <Label Text="Key Benefits:" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Margin="0,10,0,0" />
+            <Label Text="• Easy to create, edit, and manage notes." FontSize="Small" />
+            <Label Text="• Access notes anytime, anywhere." FontSize="Small" />
+            <Label Text="• Organize information with sorting and search features." FontSize="Small" />
+            <Label Text="• Save time by avoiding scattered information." FontSize="Small" />
+
+            <!-- How It Works -->
+            <Label Text="How It Works:" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" 
+                   Margin="0,10,0,0" />
+            <Label Text="1. Add new notes with a title, content, and creation date." FontSize="Small" />
+            <Label Text="2. Edit or update notes at any time." FontSize="Small" />
+            <Label Text="3. Delete notes that are no longer needed." FontSize="Small" />
+            <Label Text="4. Use search to find notes quickly." FontSize="Small" />
+            <Label Text="5. Sort notes by title or creation date in ascending or descending order." FontSize="Small" />
+
+            <!-- Encouragement -->
+            <Label Text="Start organizing your ideas and tasks with this simple and intuitive note application!" 
+                   FontSize="Medium" 
+                   FontAttributes="Italic" 
+                   Margin="0,20,0,0" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center" 
+       VerticalTextAlignment="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

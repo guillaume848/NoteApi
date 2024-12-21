@@ -11,5 +11,18 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+
+noteapi:
+    build:
+      context: ./NotesAPI
+      dockerfile: Dockerfile 
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=mysql;Database=NotesDB;User=root;Password=yourpassword;"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql 
+- 
 volumes:
   mysql_data:

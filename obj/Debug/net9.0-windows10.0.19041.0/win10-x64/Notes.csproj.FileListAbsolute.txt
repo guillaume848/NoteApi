@@ -475,3 +475,4 @@ C:\Users\cptn9\Documents\school\phase5\C#\Lab\Notes\obj\Debug\net9.0-windows10.0
 C:\Users\cptn9\Documents\school\phase5\C#\Lab\Notes\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\cptn9\Documents\school\phase5\C#\Lab\Notes\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\cptn9\Documents\school\phase5\C#\Lab\Notes\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\cptn9\Documents\school\phase5\C#\Lab\Notes\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Notes.sourcelink.json

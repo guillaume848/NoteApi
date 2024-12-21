@@ -30,7 +30,6 @@ namespace Notes.viewModels
 
             if (response.IsSuccessStatusCode)
             {
-                // Deserialize and return the newly created note
                 return await response.Content.ReadFromJsonAsync<Note>();
             }
 
